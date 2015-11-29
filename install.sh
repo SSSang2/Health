@@ -19,7 +19,7 @@ clear
 
 #install noble
 sleep 1
-cd ~
+cd ~/Health
 sudo apt-get install bluetooth bluez-utils libbluetooth-dev libudev-dev -y
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -34,7 +34,7 @@ sleep 1
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 sudo ./build
-cd ~
+cd ~/Health
 sleep 1
 
 
