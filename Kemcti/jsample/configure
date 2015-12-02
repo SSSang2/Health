@@ -1,0 +1,6 @@
+#!/bin/bash
+#echo "{\"MO\":"$GW_MODE", \"IP\":\"$GW_SERVER_IP\", \"PORT\":"$GW_SERVER_PORT", \"SN\":"$GW_SERIAL", \"GTHRES\":"$GAS_THRES_LIMIT", \"BTHRES\":"$BEA_RSSI_LIMIT",\"NO_BLUNO\":"$GAS_BLUNO_NO"}"
+#echo "{\"B1\":"$GAS_BLUNO1", \"B2\":"$GAS_BLUNO2"}"
+echo "{\"MO\":\"2\", \"IP\":\"163.180.117.146\",\"PORT\":\"8088\",\"SN\":\"0001GW\",\"GTHRES\":\"300\",\"BTHRES\":\"-90\",\"NO_BLUNO\":\"2\"}"
+echo "{\"B1\":\"f4b85e41\", \"B2\":\"d03972c4\"}"
+
