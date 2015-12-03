@@ -1,0 +1,19 @@
+#!/bin/bash
+
+sudo apt-get install ntpdate -y
+sudo ntpdate -u 3.kr.pool.ntp.org
+
+sudo rm *.db
+sudo service bluetooth restart
+sudo java -Djava.library.path="." -jar GW_Final.jar&
+echo "hciconfig setting"
+sudo hciconfig hci1 down
+sudo hciconfig hci0 up
+sudo timeout 5 ./ibeacon_scan -e
+sudo java -jar Dht11.jar&
+sudo timeout 5 ./ibeacon_scan -e
+sleep 5
+sudo java -jar Beacon.jar&
+sudo hciconfig hci1 up
+sudo java -jar Aduino.jar
+
