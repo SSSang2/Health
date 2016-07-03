@@ -19,7 +19,7 @@ clear
 
 #install noble
 sleep 1
-cd ~/Health
+cd /home/pi/Health
 sudo apt-get install bluetooth bluez-utils libbluetooth-dev libudev-dev -y
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 curl -sL https://deb.nodesource.com/setup | sudo bash -
@@ -44,10 +44,9 @@ cd ~/
 wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
 sudo apt-key add erlang_solutions.asc
 sudo apt-get update
-sudo apt-get install erlang-mini
-sudo apt-get install erlang-os-mon
-sudo apt-get install erlang-xmerl
-erl
+sudo apt-get install erlang-mini -y
+sudo apt-get install erlang-os-mon -y
+sudo apt-get install erlang-xmerl -y
 wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.2.2/rabbitmq-server-generic-unix-3.2.2.tar.gz
 cd /opt
 sudo tar zxvf ~/rabbitmq-server-generic-unix-3.2.2.tar.gz
