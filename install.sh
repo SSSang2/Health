@@ -37,6 +37,20 @@ sudo ./build
 cd ~/Health
 sleep 1
 
+#install rabbitMq
+sudo chmod 777 /etc/apt/sources.list
+sudo echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" >> /etc/apt/sources.list
+cd ~/
+wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
+sudo apt-key add erlang_solutions.asc
+sudo apt-get update
+sudo apt-get install erlang-mini
+sudo apt-get install erlang-os-mon
+sudo apt-get install erlang-xmerl
+erl
+wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.2.2/rabbitmq-server-generic-unix-3.2.2.tar.gz
+cd /opt
+sudo tar zxvf ~/rabbitmq-server-generic-unix-3.2.2.tar.gz
 
 #Permission for shell script file
 sudo chmod 755 ibeacon_scan
