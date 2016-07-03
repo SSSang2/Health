@@ -22,8 +22,8 @@ sleep 1
 cd /home/pi/Health
 sudo apt-get install bluetooth bluez-utils libbluetooth-dev libudev-dev -y
 sudo ln -s /usr/bin/nodejs /usr/bin/node
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_6.x | bash -
+sudo apt-get install -y nodejs --force-yes
 sudo apt-get install -y build-essential
 npm install noble
 sleep 1
@@ -34,7 +34,7 @@ sleep 1
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 sudo ./build
-cd ~/Health
+cd /home/pi/Health
 sleep 1
 
 #install rabbitMq
